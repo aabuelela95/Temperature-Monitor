@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "led.h": "c",
+        "stdbool.h": "c",
+        "eeprom.h": "c",
+        "cfg.h": "c",
+        "timer.h": "c",
+        "temp_monitor_app.h": "c",
+        "stdio.h": "c"
+    }
+}

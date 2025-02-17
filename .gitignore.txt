@@ -1,0 +1,11 @@
+# Ignore build and binary directories
+/build/
+/bin/
+/Debug/
+/*.o
+/*.exe
+/*.out
+
+# Ignore editor and OS generated files
+*~
+.vscode/
