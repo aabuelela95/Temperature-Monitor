@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\temp_monitor.dir/objects.a
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe qc CMakeFiles\temp_monitor.dir/objects.a @CMakeFiles\temp_monitor.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\temp_monitor.dir/objects.a -Wl,--no-whole-archive -o temp_monitor.exe -Wl,--out-implib,libtemp_monitor.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\temp_monitor.dir\linkLibs.rsp
