@@ -1,6 +1,6 @@
 #include "../include/temp_monitor_app.h"
 #include <stdio.h>
-#include <unistd.h> // for usleep (simulation)
+#include <windows.h> // for usleep (simulation)
 
 #include "../include/cfg.h"
 #include "../include/eeprom.h"
@@ -54,6 +54,6 @@ void temp_monitor_app_run(void)
         float temperature_c = temperature_sensor_to_celsius(rawAdc, s_current_hw_rev);
         led_update(&temperature_c);
         printf("Temprature = %0.1f C\n",temperature_c);
-        usleep(TIMER_PERIOD_US); // ~100 µs delay for simulation
+        Sleep((TIMER_PERIOD_US) / 1000); // ~100 µs delay for simulation
     }
 }
