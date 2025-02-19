@@ -16,7 +16,7 @@ void timer_init(uint32_t period_us)
 
 void timer_emulate_period_event(void)
 {
-    // In real hardware, you'd get an actual hardware update event
+    // In real hardware, we'd get an actual hardware update event
     // triggering the ADC. Here, we simulate by calling:
     adc_hal_trigger_conversion();
 }

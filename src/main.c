@@ -3,6 +3,6 @@
 int main(void)
 {
     temp_monitor_app_init();
-    temp_monitor_app_run();  // or run in a loop
+    temp_monitor_app_run(); 
     return 0;
 }

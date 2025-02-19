@@ -12,8 +12,7 @@ static char s_mock_serial[EEPROM_SERIAL_MAX_LEN] = "ABC1234";
 
 void eeprom_init(void)
 {
-    i2c_hal_init();  // Initialize I2C
-    printf("[EEPROM] Initialized (using I2C HAL)\n");
+    i2c_hal_init();  // Initialize I2C.
 }
 
 hw_revision_t eeprom_read_revision(void)

@@ -1,7 +1,7 @@
 #include "../include/adc_hal.h"
 #include <stdio.h>
 
-// We'll store the last ADC reading in a static variable for easy retrieval.
+// Store the last ADC reading in a static variable for easy retrieval.
 static uint16_t s_adc_last_value = 0;
 
 // If we are in simulation mode, define mock behavior. Otherwise, we do real hardware.
@@ -42,11 +42,11 @@ uint16_t adc_hal_get_value(void)
 void adc_hal_init(void)
 {
     printf("[ADC_HAL] init in REAL HARDWARE mode.\n");
-    // Example pseudo-code:
+    // pseudo-code:
     /*
     // 1) Enable ADC clock
     // 2) Configure resolution, alignment
-    // 3) Configure external trigger from Timer TRGO if desired
+    // 3) Configure external trigger from Timer if desired
     // 4) Enable EOC interrupt ISR
     */
     
@@ -65,18 +65,15 @@ uint16_t adc_hal_get_temp_value_raw(void)
 }
 
 /**
- * @brief The actual ISRthat the hardware calls
+ * @brief The actual ISR that the hardware calls
  *        when the ADC finishes a conversion.
  *        The name should match that in the ISR vector table
  */
 void ADC_IRQHandler(void)
 {
     // 1) Check if EOC is set
-    // 2) read the data
-    // s_adc_last_value = (uint16_t)raw;
+    // 2) read the data from register into s_adc_last_value;
     // 3) clear the EOC flag
-    
-    s_adc_last_value = 1234; // placeholder
 }
 #endif // USE_ADC_SIM
  
