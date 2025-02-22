@@ -4,6 +4,8 @@
 
 This document describes the software architecture of the **TemperatureMonitor** project—a demonstration of a scalable embedded system for temperature monitoring. The design is organized in layers that separate low-level hardware access (I²C, GPIO, Timer, ADC) from higher-level domain logic (EEPROM, LED, Temperature Sensor) and the application layer. This architecture is designed to be maintainable, testable, and scalable.
 
+For an overview of the full project description, please see **Document “neu_embedded_task”**, which outlines the high-level goals, requirements, and constraints.
+
 ---
 
 ## 2. Static Architecture
@@ -102,6 +104,21 @@ This architecture provides:
 - Clear separation of concerns that facilitates maintainability, testability, and scalability in a complex embedded system.
 
 This document and accompanying diagrams illustrate both the **static architecture** (module structure and dependencies) and the **dynamic behavior** (runtime data flow), making it a comprehensive reference for understanding the TemperatureMonitor project's design.
+
+---
+
+## 6. Traceability to Document “neu_embedded_task”
+
+**Document “neu_embedded_task”** contains the **project description**, outlining the requirements and objectives for the TemperatureMonitor system. This architecture document references those requirements and constraints as follows:
+
+1. **Timer Interval** (Requirement in “neu_embedded_task” stating 100 µs sampling):  
+   - Mapped to `timer_hal` usage with a 100 µs period, ensuring minimal jitter.  
+2. **Temperature Range** (Ok/Warning/Critical in doc “neu_embedded_task”):  
+   - Mapped to **LED** thresholds (5 °C, 85 °C, 105 °C) in the **LED domain** module.  
+3. **Hardware Revision** reading (described in doc “neu_embedded_task” for supporting Rev-A or Rev-B sensors):  
+   - Implemented by **Eeprom** (using `i2c_hal`) and used by **TemperatureSensor** to scale ADC data differently.  
+
+This ensures every key requirement from the “neu_embedded_task” document is addressed within our layered architecture, making it clear **where** each requirement is fulfilled in the code structure.
 
 ---
 
