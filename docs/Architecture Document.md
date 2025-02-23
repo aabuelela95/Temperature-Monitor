@@ -81,8 +81,7 @@ For an overview of the full project description, please see **Document “neu_em
 ## 4. Real Hardware Considerations
 
 - **EEPROM:**  
-  In a real system, the EEPROM module would use I²C communication (handled by the i2c_hal module) to read/write non-volatile configuration data.  
-  - *Example:* Using `HAL_I2C_Mem_Read()` on an STM32.
+  In a real system, the EEPROM module would use I²C communication (handled by the i2c_hal module) to read/write non-volatile configuration data.
 
 - **GPIO:**  
   The GPIO HAL would set up the GPIO ports and pins by enabling clocks and configuring pin modes.  
