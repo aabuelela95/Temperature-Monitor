@@ -1,6 +1,5 @@
-#include "../include/gpio_hal.h"
+#include "gpio_hal.h"
 #include <stdio.h>
-
 
 
 void gpio_init(void)

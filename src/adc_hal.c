@@ -1,4 +1,4 @@
-#include "../include/adc_hal.h"
+#include "adc_hal.h"
 #include <stdio.h>
 
 // Store the last ADC reading in a static variable for easy retrieval.
@@ -25,7 +25,7 @@ void adc_hal_trigger_conversion(void)
     s_adc_last_value = val;
 }
 
-uint16_t adc_hal_get_value(void)
+uint16_t adc_hal_get_temp_value_raw(void)
 {
     return s_adc_last_value;
 }

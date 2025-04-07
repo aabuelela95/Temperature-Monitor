@@ -1,13 +1,12 @@
-#include "../include/temp_monitor_app.h"
 #include <stdio.h>
 #include <windows.h> // for usleep (simulation)
-
-#include "../include/cfg.h"
-#include "../include/eeprom.h"
-#include "../include/temperature_sensor.h"
-#include "../include/led.h"
-#include "../include/timer.h"
-#include "../include/adc_hal.h"
+#include "temp_monitor_app.h"
+#include "cfg.h"
+#include "eeprom.h"
+#include "temperature_sensor.h"
+#include "led.h"
+#include "timer.h"
+#include "adc_hal.h"
 
 // maybe do a cfg module?? 
 static hw_revision_t s_current_hw_rev = HW_REV_A;

@@ -1,6 +1,6 @@
-#include "../include/i2c_hal.h"
 #include <stdio.h>
 #include <string.h>
+#include "i2c_hal.h"
 
 void i2c_hal_init(void)
 {

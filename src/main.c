@@ -1,4 +1,4 @@
-#include "../include/temp_monitor_app.h"
+#include "temp_monitor_app.h"
 
 int main(void)
 {

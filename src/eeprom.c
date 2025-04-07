@@ -1,5 +1,5 @@
-#include "../include/eeprom.h"
-#include "../include/i2c_hal.h"  // Now we rely on the I2C HAL
+#include "eeprom.h"
+#include "i2c_hal.h"  // Now we rely on the I2C HAL
 #include <string.h>
 #include <stdio.h>
 
@@ -28,8 +28,8 @@ hw_revision_t eeprom_read_revision(void)
 void eeprom_read_serial_number(char *dest, size_t len)
 {
     // Simulation
-    strncpy(dest, s_mock_serial, len);
-    dest[len - 1] = '\0';
+    strncpy_s(dest,len, s_mock_serial, len);
+    //dest[len - 1] = '\0';
 
     
     // Real hardware: read from I2C

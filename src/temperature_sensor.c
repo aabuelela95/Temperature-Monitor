@@ -1,5 +1,7 @@
-#include "../include/temperature_sensor.h"
 #include <stdio.h>
+#include "temperature_sensor.h"
+#include "adc_hal.h"
+
 
 // For demonstration, a mock incremental ADC value
 static uint16_t s_mock_adc_val = 0;
@@ -11,11 +13,7 @@ void temperature_sensor_init(void)
 
 uint16_t temperature_sensor_read_adc(void)
 {
-    // In real hardware, we should call the ADC function
-    //   s_mock_adc_val = adc_hal_get_temp_value_raw();
-    // For demo, we just cycle from 0..200
-    uint16_t val = s_mock_adc_val;
-    s_mock_adc_val = (s_mock_adc_val + 1) % 201;
+    uint16_t val = adc_hal_get_temp_value_raw();
     return val;
 }
 

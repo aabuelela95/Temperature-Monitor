@@ -1,7 +1,7 @@
-#include "../include/led.h"
-#include "../include/gpio_hal.h"
-#include "../include/cfg.h"
 #include <stdio.h>
+#include "led.h"
+#include "gpio_hal.h"
+#include "cfg.h"
 
 void led_init(void)
 {

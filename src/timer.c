@@ -1,8 +1,8 @@
-#include "../include/timer.h"
 #include <stdio.h>
+#include "timer.h"
+#include "adc_hal.h"
 
-// We'll call adc_hal_trigger_conversion() on each "period" for simulation this to emulate a HW trigger
-extern void adc_hal_trigger_conversion(void);
+
 
 void timer_init(uint32_t period_us)
 {
