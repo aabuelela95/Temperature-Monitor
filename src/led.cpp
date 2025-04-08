@@ -1,6 +1,6 @@
-#include "../include/led.hpp"
-#include "../include/gpio_hal.hpp"
-#include "../include/cfg.hpp"
+#include "led.hpp"
+#include "gpio_hal.hpp"
+#include "cfg.hpp"
 
 LedDriver::LedDriver(void) noexcept
 {

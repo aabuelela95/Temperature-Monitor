@@ -1,4 +1,4 @@
-#include "../include/i2c_hal.hpp"
+#include "i2c_hal.hpp"
 
 I2cHal::I2cHal(void) noexcept
 {
@@ -28,6 +28,6 @@ bool I2cHal::read(uint16_t memAddr, uint8_t* data, std::size_t length) noexcept
     (void)memAddr; 
     (void)data; 
     (void)length;
-    // Real code: start, memAddr, repeated start, read
+    // Real code: start, memAddr, read
     return true;
 }

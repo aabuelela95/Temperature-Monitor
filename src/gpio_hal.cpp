@@ -1,4 +1,4 @@
-#include "../include/gpio_hal.hpp"
+#include "gpio_hal.hpp"
 
 GpioHal::GpioHal(void) noexcept
 {
@@ -23,10 +23,12 @@ void GpioHal::setLedGreen(PinState state) noexcept
 
 void GpioHal::setLedYellow(PinState state) noexcept
 {
+    // Yellow
     (void)state;
 }
 
 void GpioHal::setLedRed(PinState state) noexcept
 {
+    // Red
     (void)state;
 }

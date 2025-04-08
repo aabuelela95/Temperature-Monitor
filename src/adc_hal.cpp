@@ -1,4 +1,4 @@
-#include "../include/adc_hal.hpp"
+#include "adc_hal.hpp"
 
 volatile uint16_t AdcHal::s_lastValue = 0U;
 

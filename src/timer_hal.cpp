@@ -20,5 +20,5 @@ void TimerHal::init(uint32_t periodUs) noexcept
 
 void TimerHal::start(void) noexcept
 {
-    // e.g. enable the timer
+    // enable the timer
 }

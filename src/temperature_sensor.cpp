@@ -1,6 +1,6 @@
-#include "../include/temperature_sensor.hpp"
-#include "../include/adc_hal.hpp"
-#include "../include/cfg.hpp"
+#include "temperature_sensor.hpp"
+#include "adc_hal.hpp"
+#include "cfg.hpp"
 
 uint8_t TemperatureSensor::s_hwRevision = 0U;
 

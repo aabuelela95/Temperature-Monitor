@@ -44,9 +44,9 @@ void TempMonitorApp::run(void) noexcept
         float tempC = TemperatureSensor::readTemperature();
         LedDriver::update(tempC);
 
-        // Basic busy-wait delay. In real code, you might use an RTOS or timer-based scheduling
+        // delay?
         for (volatile uint32_t i = 0U; i < 100000U; i++) {
-            // no-op
+            // Do nothing
         }
     }
 }

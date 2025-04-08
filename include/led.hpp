@@ -16,6 +16,7 @@ public:
 private:
     LedDriver(void) noexcept;
     ~LedDriver(void) noexcept;
+    /* Prevent copying */
     LedDriver(const LedDriver&) = delete;
     LedDriver& operator=(const LedDriver&) = delete;
 };

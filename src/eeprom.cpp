@@ -1,5 +1,5 @@
-#include "../include/eeprom.hpp"
-#include "../include/i2c_hal.hpp"
+#include "eeprom.hpp"
+#include "i2c_hal.hpp"
 
 Eeprom::Eeprom(void) noexcept
 {
@@ -19,6 +19,5 @@ void Eeprom::init(void) noexcept
 uint8_t Eeprom::readHwRevision(void) noexcept
 {
     // read from a known location in the EEPROM
-    // For now, just a placeholder returning 0 => Rev-A
     return 0U;
 }

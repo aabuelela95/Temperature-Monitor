@@ -18,6 +18,7 @@ public:
 private:
     I2cHal(void) noexcept;
     ~I2cHal(void) noexcept;
+    /* Prevent copying */
     I2cHal(const I2cHal&) = delete;
     I2cHal& operator=(const I2cHal&) = delete;
 };

@@ -17,6 +17,7 @@ public:
 private:
     TempMonitorApp(void) noexcept;
     ~TempMonitorApp(void) noexcept;
+    /* Prevent copying */
     TempMonitorApp(const TempMonitorApp&) = delete;
     TempMonitorApp& operator=(const TempMonitorApp&) = delete;
 };

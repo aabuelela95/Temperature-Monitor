@@ -17,6 +17,7 @@ public:
 private:
     Eeprom(void) noexcept;
     ~Eeprom(void) noexcept;
+    /* Prevent copying */
     Eeprom(const Eeprom&) = delete;
     Eeprom& operator=(const Eeprom&) = delete;
 };

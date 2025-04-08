@@ -24,6 +24,7 @@ public:
 private:
     GpioHal(void) noexcept;
     ~GpioHal(void) noexcept;
+    /* Prevent copying */
     GpioHal(const GpioHal&) = delete;
     GpioHal& operator=(const GpioHal&) = delete;
 };

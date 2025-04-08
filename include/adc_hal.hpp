@@ -21,6 +21,7 @@ public:
 private:
     AdcHal(void) noexcept;
     ~AdcHal(void) noexcept;
+    /* Prevent copying */
     AdcHal(const AdcHal&) = delete;
     AdcHal& operator=(const AdcHal&) = delete;
 

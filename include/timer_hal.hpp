@@ -17,6 +17,7 @@ public:
 private:
     TimerHal(void) noexcept;
     ~TimerHal(void) noexcept;
+    /* Prevent copying */
     TimerHal(const TimerHal&) = delete;
     TimerHal& operator=(const TimerHal&) = delete;
 };

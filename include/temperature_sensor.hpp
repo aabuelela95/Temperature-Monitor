@@ -16,6 +16,7 @@ public:
 private:
     TemperatureSensor(void) noexcept;
     ~TemperatureSensor(void) noexcept;
+    /* Prevent copying */
     TemperatureSensor(const TemperatureSensor&) = delete;
     TemperatureSensor& operator=(const TemperatureSensor&) = delete;
 
